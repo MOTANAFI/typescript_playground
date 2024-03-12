@@ -129,12 +129,27 @@
 
 // console.log(`Name: ${firstName} ${lastName}, Age: ${age}`)
 
-function printUser(): {name: string; age: number} {
-    return {
-        name: 'mohamed',
-        age: 30
-    }
+// function printUser(): {name: string; age: number} {
+//     return {
+//         name: 'mohamed',
+//         age: 30
+//     }
+// }
+
+// const res = printUser();
+// console.log(res)
+
+// type Aliases
+
+type User = {
+    name: string;
+    age: number;
+    location: string
 }
 
-const res = printUser();
+const printUserInfo = (user: User) => {
+    return `Name: ${user.name} Age: ${user.age}, location: (${user.location})`
+}
+
+const res = printUserInfo({name: 'Alex', age: 30, location: 'USA'});
 console.log(res)
