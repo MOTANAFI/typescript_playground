@@ -60,3 +60,12 @@
 // Arrow Func
 // const double2 = (x: number): number => x * x
 // console.log(double2(3))
+
+// Void in typescript
+
+function printMessage(message: string): void {
+    console.log(`this is my ${message}`)
+}
+
+printMessage('message')
+
