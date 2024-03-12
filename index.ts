@@ -105,8 +105,18 @@
 //error
 // numList.push(true)
 
-const items: Array<number> = [1,2,3,4];
-console.log(items)
+// const items: Array<number> = [1,2,3,4];
+// console.log(items)
+
+// multidimentional array
+
+const singleDi: number[] =  [1,2,3,4]
+const multiDi: number[][] = [[1,2,3,4]]
+const tripleDi: number[][][] = [[[1,3,4,6,7]]];
+
+console.log(singleDi)
+console.log(multiDi)
+console.log(tripleDi)
 
 
 
