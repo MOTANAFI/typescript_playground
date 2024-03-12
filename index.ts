@@ -141,15 +141,31 @@
 
 // type Aliases
 
+// type User = {
+//     name: string;
+//     age: number;
+//     location: string
+// }
+
+// const printUserInfo = (user: User) => {
+//     return `Name: ${user.name} Age: ${user.age}, location: (${user.location})`
+// }
+
+// const res = printUserInfo({name: 'Alex', age: 30, location: 'USA'});
+// console.log(res)
+
+// Optional properties
+
 type User = {
     name: string;
-    age: number;
-    location: string
+    age?: number;
+    readonly location: string
 }
 
-const printUserInfo = (user: User) => {
-    return `Name: ${user.name} Age: ${user.age}, location: (${user.location})`
+const user: User = {
+    name: 'mohamed',
+    age: 30,
+    location: 'japan'
 }
 
-const res = printUserInfo({name: 'Alex', age: 30, location: 'USA'});
-console.log(res)
+console.log(`Name: ${user.name}, Age: ${user.age}, Location: ${user.location}`)
