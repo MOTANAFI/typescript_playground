@@ -156,16 +156,42 @@
 
 // Optional properties
 
-type User = {
-    name: string;
-    age?: number;
-    readonly location: string
+// type User = {
+//     name: string;
+//     age?: number;
+//     readonly location: string
+// }
+
+// const user: User = {
+//     name: 'mohamed',
+//     age: 30,
+//     location: 'japan'
+// }
+
+// console.log(`Name: ${user.name}, Age: ${user.age}, Location: ${user.location}`)
+
+
+// Intersection type
+
+type UserInfo = {
+    firstName: string;
+    lastName: string;
+    age: number
 }
 
-const user: User = {
-    name: 'mohamed',
+type AccountDetails = {
+    email: string;
+    password: string
+}
+
+type User = UserInfo & AccountDetails
+
+const moha: User = {
+    firstName: 'moha',
+    lastName: 'wbi',
     age: 30,
-    location: 'japan'
+    email: 'lakaaka@gmail.com',
+    password: 'password12'
 }
 
-console.log(`Name: ${user.name}, Age: ${user.age}, Location: ${user.location}`)
+console.log(`Name: ${moha.firstName} ${moha.lastName} Age: ${moha.age} Email: ${moha.email}`)
