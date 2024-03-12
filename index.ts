@@ -242,3 +242,14 @@
 
 
 // const games: [string, number, boolean] = ['Game 1', 2, true]
+/// Enums
+
+enum WeatherCondition {
+    Sunny = 'sunny',
+    Cloudy = 'cloudy',
+    Rainy = 'rainy',
+    Snowy = 'snowy'
+}
+const currentWeather = WeatherCondition.Snowy
+
+console.log(WeatherCondition.Rainy)
