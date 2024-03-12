@@ -15,9 +15,14 @@
 
 // tyep inferrence
 
-let tech = ' Typecsript'
-let favNumber = 9;
-let tsHard = true
-console.log(typeof tech)
-console.log(typeof favNumber)
-console.log(typeof tsHard)
+// let tech = ' Typecsript'
+// let favNumber = 9;
+// let tsHard = true
+// console.log(typeof tech)
+// console.log(typeof favNumber)
+// console.log(typeof tsHard)
+
+// Any Type
+
+let color: any = 'green'
+console.log(typeof color)
