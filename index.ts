@@ -173,25 +173,54 @@
 
 // Intersection type
 
+// type UserInfo = {
+//     firstName: string;
+//     lastName: string;
+//     age: number
+// }
+
+// type AccountDetails = {
+//     email: string;
+//     password: string
+// }
+
+// type User = UserInfo & AccountDetails
+
+// const moha: User = {
+//     firstName: 'moha',
+//     lastName: 'wbi',
+//     age: 30,
+//     email: 'lakaaka@gmail.com',
+//     password: 'password12'
+// }
+
+// console.log(`Name: ${moha.firstName} ${moha.lastName} Age: ${moha.age} Email: ${moha.email}`)
+
+
+// Union types
+
+let password: string | number = 20;
+
 type UserInfo = {
-    firstName: string;
-    lastName: string;
+    first: string;
+    last: string;
     age: number
 }
-
 type AccountDetails = {
     email: string;
-    password: string
+    password: string;
 }
 
-type User = UserInfo & AccountDetails
+// let user: UserInfo | AccountDetails = {
+//     first: 'lakie',
+//     last: 'Dakie',
+//     age: 45
+// }
 
-const moha: User = {
-    firstName: 'moha',
-    lastName: 'wbi',
-    age: 30,
-    email: 'lakaaka@gmail.com',
-    password: 'password12'
+let user: UserInfo | AccountDetails = {
+   email: 'lakei@gmail.com',
+   password: 'lakie2340'
 }
 
-console.log(`Name: ${moha.firstName} ${moha.lastName} Age: ${moha.age} Email: ${moha.email}`)
+const items: (number  | string)[] = [1,4,67,76, 'stringksd']
+console.log(items)
