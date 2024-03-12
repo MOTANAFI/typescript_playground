@@ -4,7 +4,7 @@
 //  let myName: string = 'Mohamed'
 //  console.log(myName)
 
- // Numbers
+// Numbers
 
 //  let favNumber: number = 3;
 //  console.log(favNumber)
@@ -50,7 +50,7 @@
 // console.log(res)
 
 // function return annotation
-// REGULAR FUNCTION 
+// REGULAR FUNCTION
 // function double1(x:number): number {
 //     return x * x
 // }
@@ -98,7 +98,6 @@
 // items.push('keyboard');
 // console.log(items)
 
-
 // const numList: number[] = [];
 
 // numList.push(54)
@@ -110,18 +109,32 @@
 
 // multidimentional array
 
-const singleDi: number[] =  [1,2,3,4]
-const multiDi: number[][] = [[1,2,3,4]]
-const tripleDi: number[][][] = [[[1,3,4,6,7]]];
+// const singleDi: number[] =  [1,2,3,4]
+// const multiDi: number[][] = [[1,2,3,4]]
+// const tripleDi: number[][][] = [[[1,3,4,6,7]]];
 
-console.log(singleDi)
-console.log(multiDi)
-console.log(tripleDi)
+// console.log(singleDi)
+// console.log(multiDi)
+// console.log(tripleDi)
 
+// Objects in typescript
 
+// const person: { firstName: string; lastName: string; age: number } = {
+//   firstName: "mohamed",
+//   lastName: "taha",
+//   age: 30,
+// };
 
+// const {firstName, lastName, age} = person;
 
+// console.log(`Name: ${firstName} ${lastName}, Age: ${age}`)
 
+function printUser(): {name: string; age: number} {
+    return {
+        name: 'mohamed',
+        age: 30
+    }
+}
 
-
-
+const res = printUser();
+console.log(res)
