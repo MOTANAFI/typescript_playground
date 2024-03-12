@@ -24,5 +24,23 @@
 
 // Any Type
 
-let color: any = 'green'
-console.log(typeof color)
+// let color: any = 'green'
+// console.log(typeof color)
+
+// functions
+// regular function
+// function addOne(num: number) {
+//     return num + 3
+// }
+
+// const res = addOne(3)
+// console.log(res)
+
+// Arrow function
+
+// const double = (x:number, y:number) => x + y;
+// const res = double(2,4)
+// console.log(res)
+
+// Default Params Value
+
