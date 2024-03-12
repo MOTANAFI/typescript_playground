@@ -43,4 +43,8 @@
 // console.log(res)
 
 // Default Params Value
-
+function greet(person: string = 'Annonymous') {
+    return `Hello ${person}`
+}
+const res = greet('mohamed');
+console.log(res)
