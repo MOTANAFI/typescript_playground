@@ -63,9 +63,32 @@
 
 // Void in typescript
 
-function printMessage(message: string): void {
-    console.log(`this is my ${message}`)
+// function printMessage(message: string): void {
+//     console.log(`this is my ${message}`)
+// }
+
+// printMessage('message')
+
+// Never type
+
+// function that has an infinte loop;
+
+function throwError(msg: string): never {
+    throw new Error(msg)
+};
+let x: never
+
+function infinteLoop(): never {
+    while (true) {}
 }
 
-printMessage('message')
+function neverReturns(): never {
+    while (true) {}
+}
+
+x = neverReturns()
+
+
+
+
 
