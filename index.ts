@@ -43,8 +43,20 @@
 // console.log(res)
 
 // Default Params Value
-function greet(person: string = 'Annonymous') {
-    return `Hello ${person}`
-}
-const res = greet('mohamed');
-console.log(res)
+// function greet(person: string = 'Annonymous') {
+//     return `Hello ${person}`
+// }
+// const res = greet('mohamed');
+// console.log(res)
+
+// function return annotation
+// REGULAR FUNCTION 
+// function double1(x:number): number {
+//     return x * x
+// }
+// const res = double1(2)
+// console.log(res)
+
+// Arrow Func
+// const double2 = (x: number): number => x * x
+// console.log(double2(3))
