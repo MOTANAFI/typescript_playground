@@ -73,20 +73,43 @@
 
 // function that has an infinte loop;
 
-function throwError(msg: string): never {
-    throw new Error(msg)
-};
-let x: never
+// function throwError(msg: string): never {
+//     throw new Error(msg)
+// };
+// let x: never
 
-function infinteLoop(): never {
-    while (true) {}
-}
+// function infinteLoop(): never {
+//     while (true) {}
+// }
 
-function neverReturns(): never {
-    while (true) {}
-}
+// function neverReturns(): never {
+//     while (true) {}
+// }
 
-x = neverReturns()
+// x = neverReturns()
+
+// Array types in depth;
+//1
+// const nums : number[] = [1,2,3,4,5,6];
+// const str: string[] = ['one', 'two', 'three'];
+// console.log(str)
+//2
+// const items: string[] =  [];
+// items.push('keyboard');
+// console.log(items)
+
+
+// const numList: number[] = [];
+
+// numList.push(54)
+//error
+// numList.push(true)
+
+const items: Array<number> = [1,2,3,4];
+console.log(items)
+
+
+
 
 
 
