@@ -199,17 +199,17 @@
 
 // Union types
 
-let password: string | number = 20;
+// let password: string | number = 20;
 
-type UserInfo = {
-    first: string;
-    last: string;
-    age: number
-}
-type AccountDetails = {
-    email: string;
-    password: string;
-}
+// type UserInfo = {
+//     first: string;
+//     last: string;
+//     age: number
+// }
+// type AccountDetails = {
+//     email: string;
+//     password: string;
+// }
 
 // let user: UserInfo | AccountDetails = {
 //     first: 'lakie',
@@ -217,10 +217,16 @@ type AccountDetails = {
 //     age: 45
 // }
 
-let user: UserInfo | AccountDetails = {
-   email: 'lakei@gmail.com',
-   password: 'lakie2340'
-}
+// let user: UserInfo | AccountDetails = {
+//    email: 'lakei@gmail.com',
+//    password: 'lakie2340'
+// }
 
-const items: (number  | string)[] = [1,4,67,76, 'stringksd']
-console.log(items)
+// const items: (number  | string)[] = [1,4,67,76, 'stringksd']
+// console.log(items)
+
+// Literal types 
+// string literal types
+let color: 'red' | 'green' | 'blue';
+color = 'red'
+
