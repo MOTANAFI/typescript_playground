@@ -227,6 +227,18 @@
 
 // Literal types 
 // string literal types
-let color: 'red' | 'green' | 'blue';
-color = 'red'
+// let color: 'red' | 'green' | 'blue';
+// color = 'red'
 
+// Tuples
+
+// let myTuples: [number, string]
+// myTuples = [10, 'lakak']
+
+// console.log(myTuples)
+
+// const porducts: (number | string)[] = ['item 1', 12];
+// console.log(porducts)
+
+
+// const games: [string, number, boolean] = ['Game 1', 2, true]
