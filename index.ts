@@ -275,34 +275,50 @@
 // in which class members can be accessed from whithin and outside the class.
 // e.g public, private, protected;
 
-class Person {
-    private first: string;
-    public last: string;
-    protected age: number;
-    constructor(first: string, last: string, age: number) {
-        this.first = first;
-        this.last = last;
-        this.age = age
-    }
-    getName(): string {
-        return `${this.first} ${this.last} Age: ${this.age}`
-    }
-}
+// class Person {
+//     private first: string;
+//     public last: string;
+//     protected age: number;
+//     constructor(first: string, last: string, age: number) {
+//         this.first = first;
+//         this.last = last;
+//         this.age = age
+//     }
+//     getName(): string {
+//         return `${this.first} ${this.last} Age: ${this.age}`
+//     }
+// }
 
 
-// let p1 = new Person('lakaka', 'jakaka')
+// // let p1 = new Person('lakaka', 'jakaka')
 
-class Child extends Person {
-    constructor(first: string, last: string, age: number) {
-        super(first, last, age);
+// class Child extends Person {
+//     constructor(first: string, last: string, age: number) {
+//         super(first, last, age);
         
+//     }
+
+// }
+
+// const moha = new Child('moha', 'na', 40);
+// console.log(moha)
+
+// Getters and setters
+
+class MyClass {
+    private _myProperty: number = 0;
+    get myProperty(): number {
+        return this._myProperty
     }
 
+    set myProperty(value: number) {
+        this._myProperty = value
+    }
 }
 
-const moha = new Child('moha', 'na', 40);
-console.log(moha)
+const myInstance = new MyClass();
+myInstance.myProperty = 90
 
-
+console.log(`Current value: ${myInstance.myProperty}`)
 
 
