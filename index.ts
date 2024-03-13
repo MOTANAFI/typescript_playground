@@ -256,15 +256,53 @@
 
 // Classes in typescript
 
-class Person {
-    name: string;
-    age: number
-    constructor(name: string, age: number) {
-        this.name = name;
-        this.age = age
+// class Person {
+//     name: string;
+//     age: number
+//     constructor(name: string, age: number) {
+//         this.name = name;
+//         this.age = age
 
+//     }
+// }
+
+// const person  = new Person("jakaka", 40)
+// console.log(person.name)
+
+//Access Modifiers 
+// in Typescript, you can access modifiers to control the visibility
+// of class members (properties and methods). Access modifiers determine the ways
+// in which class members can be accessed from whithin and outside the class.
+// e.g public, private, protected;
+
+class Person {
+    private first: string;
+    public last: string;
+    protected age: number;
+    constructor(first: string, last: string, age: number) {
+        this.first = first;
+        this.last = last;
+        this.age = age
+    }
+    getName(): string {
+        return `${this.first} ${this.last} Age: ${this.age}`
     }
 }
 
-const person  = new Person("jakaka", 40)
-console.log(person.name)
+
+// let p1 = new Person('lakaka', 'jakaka')
+
+class Child extends Person {
+    constructor(first: string, last: string, age: number) {
+        super(first, last, age);
+        
+    }
+
+}
+
+const moha = new Child('moha', 'na', 40);
+console.log(moha)
+
+
+
+
