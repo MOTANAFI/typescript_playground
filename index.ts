@@ -454,30 +454,61 @@ interface Song {
 
 // Declaration merging
 
-interface Car {
-    brand: string;
-    start(): void;
+// interface Car {
+//     brand: string;
+//     start(): void;
+// }
+
+// // Decralartion (merging intefrace extenstion)
+
+// interface Car {
+//     model: string;
+//     stop(): void;
+// }
+
+// const myCar: Car = {
+//     brand: 'BMW',
+//     model: 'M24',
+//     start() {
+//         console.log('start')
+//     },
+//     stop() {
+//         console.log('stop')
+//     }
+// }
+
+// myCar.start()
+// myCar.stop(
+
+//)
+
+///////// GENERICS
+
+// function printNumber(item: number, defaultValue: number): [number, number] {
+//     return [item, defaultValue]
+// }
+
+// function printString(item: string, defaultValue: string): [string, string] {
+//     return [item, defaultValue]
+// }
+
+// function printBoolean(item: boolean, defaultValue:boolean): [boolean, boolean] {
+//     return [item, defaultValue]
+// }
+
+
+// const num = printNumber(12, 20)
+// const str = printString('hello', 'universe');
+// const boolean = printBoolean(false, true)
+// console.log(num)
+// console.log(str)
+// console.log(boolean)
+
+
+
+function printNumber(item: any, defaultValue: any): [any, any] {
+    return [item, defaultValue]
 }
 
-// Decralartion (merging intefrace extenstion)
-
-interface Car {
-    model: string;
-    stop(): void;
-}
-
-const myCar: Car = {
-    brand: 'BMW',
-    model: 'M24',
-    start() {
-        console.log('start')
-    },
-    stop() {
-        console.log('stop')
-    }
-}
-
-myCar.start()
-myCar.stop(
-    
-)
+const num = printNumber(2, 'lakakkj');
+console.log(num)
