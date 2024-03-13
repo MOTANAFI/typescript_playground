@@ -408,49 +408,76 @@ interface Song {
 
 // extending inerfaces
 
-interface MovieDetails {
-  readonly name: string;
-  ratings: number;
-  printMovieInfo(name: string, price: number, ratings: number): string | number;
-}
+// interface MovieDetails {
+//   readonly name: string;
+//   ratings: number;
+//   printMovieInfo(name: string, price: number, ratings: number): string | number;
+// }
 
-interface MovieGenre extends MovieDetails {
-  genre: string;
-}
+// interface MovieGenre extends MovieDetails {
+//   genre: string;
+// }
 
-const movie1: MovieGenre = {
-  name: "Star Wars",
-  genre: "Action",
-  ratings: 9.8,
-  printMovieInfo(
-    name: string,
-    price: number,
-    ratings: number
-  ): string | number {
-    return `Move name: ${name} price: ${price} Ratings: ${ratings}`;
-  },
-};
+// const movie1: MovieGenre = {
+//   name: "Star Wars",
+//   genre: "Action",
+//   ratings: 9.8,
+//   printMovieInfo(
+//     name: string,
+//     price: number,
+//     ratings: number
+//   ): string | number {
+//     return `Move name: ${name} price: ${price} Ratings: ${ratings}`;
+//   },
+// };
 
-const res = movie1.printMovieInfo('John wick', 100, 9.7)
-console.log(res)
+// const res = movie1.printMovieInfo('John wick', 100, 9.7)
+// console.log(res)
 
-interface Vehicle {
-    start(): void;
-    stop(): void
-}
+// interface Vehicle {
+//     start(): void;
+//     stop(): void
+// }
 
-class Car implements Vehicle {
-    start(): void {
-        console.log('Car is starting')
-    }
-    stop():void {
-        console.log('car stops')
-    }
-}
+// class Car implements Vehicle {
+//     start(): void {
+//         console.log('Car is starting')
+//     }
+//     stop():void {
+//         console.log('car stops')
+//     }
+// }
 
-const myCar = new Car();
-myCar.start()
-myCar.stop()
+// const myCar = new Car();
+// myCar.start()
+// myCar.stop()
 
 // Declaration merging
 
+interface Car {
+    brand: string;
+    start(): void;
+}
+
+// Decralartion (merging intefrace extenstion)
+
+interface Car {
+    model: string;
+    stop(): void;
+}
+
+const myCar: Car = {
+    brand: 'BMW',
+    model: 'M24',
+    start() {
+        console.log('start')
+    },
+    stop() {
+        console.log('stop')
+    }
+}
+
+myCar.start()
+myCar.stop(
+    
+)
