@@ -170,7 +170,6 @@
 
 // console.log(`Name: ${user.name}, Age: ${user.age}, Location: ${user.location}`)
 
-
 // Intersection type
 
 // type UserInfo = {
@@ -195,7 +194,6 @@
 // }
 
 // console.log(`Name: ${moha.firstName} ${moha.lastName} Age: ${moha.age} Email: ${moha.email}`)
-
 
 // Union types
 
@@ -225,7 +223,7 @@
 // const items: (number  | string)[] = [1,4,67,76, 'stringksd']
 // console.log(items)
 
-// Literal types 
+// Literal types
 // string literal types
 // let color: 'red' | 'green' | 'blue';
 // color = 'red'
@@ -239,7 +237,6 @@
 
 // const porducts: (number | string)[] = ['item 1', 12];
 // console.log(porducts)
-
 
 // const games: [string, number, boolean] = ['Game 1', 2, true]
 /// Enums
@@ -269,7 +266,7 @@
 // const person  = new Person("jakaka", 40)
 // console.log(person.name)
 
-//Access Modifiers 
+//Access Modifiers
 // in Typescript, you can access modifiers to control the visibility
 // of class members (properties and methods). Access modifiers determine the ways
 // in which class members can be accessed from whithin and outside the class.
@@ -289,13 +286,12 @@
 //     }
 // }
 
-
 // // let p1 = new Person('lakaka', 'jakaka')
 
 // class Child extends Person {
 //     constructor(first: string, last: string, age: number) {
 //         super(first, last, age);
-        
+
 //     }
 
 // }
@@ -305,20 +301,156 @@
 
 // Getters and setters
 
-class MyClass {
-    private _myProperty: number = 0;
-    get myProperty(): number {
-        return this._myProperty
-    }
+// class MyClass {
+//     private _myProperty: number = 0;
+//     get myProperty(): number {
+//         return this._myProperty
+//     }
 
-    set myProperty(value: number) {
-        this._myProperty = value
+//     set myProperty(value: number) {
+//         this._myProperty = value
+//     }
+// }
+
+// const myInstance = new MyClass();
+// myInstance.myProperty = 90
+
+// console.log(`Current value: ${myInstance.myProperty}`)
+
+// interfaces
+// interface Computer {
+//     name: string;
+//     ram: number;
+//     hdd: number
+// }
+
+// const computerExample: Computer =  {
+//     name: 'i17',
+//     ram: 8,
+//     hdd: 100
+// }
+
+// console.log(computerExample)
+
+// interface Movie {
+//     readonly name: string;
+//     ratings: number;
+//     genre?: string;
+// }
+
+// const movie1 : Movie = {
+//     name: 'Star Wars',
+//     ratings: 9.0,
+//     genre: 'drama, action'
+// }
+
+// console.log(movie1)
+
+// interface for functions
+
+// interface MathOp {
+//     (x: number, y: number): number
+// }
+
+// const add : MathOp = (a, b) => a + b;
+// console.log(add(2,4))
+
+// interfaces with methods
+
+// interface Person {
+//     firstName: string;
+//     lastName: string;
+//     age: number;
+//     sayHello(): void
+// }
+
+// function greet(person: Person) {
+//     console.log(`Hello, ${person.firstName} ${person.lastName}`)
+//     person.sayHello()
+// }
+
+// const john: Person = {
+//     firstName: 'John',
+//     lastName: 'Doe',
+//     age: 30,
+//     sayHello() {
+//         console.log('Hi There')
+//     },
+// }
+
+// const lakeer: Person = {
+//     firstName: 'lakeer',
+//     lastName: 'laka',
+//     age: 40,
+//     sayHello() {
+//         console.log('Hi munjee')
+//     },
+// }
+
+// greet(john)
+// greet(lakeer)
+
+interface Song {
+  songName: string;
+  singerName: string;
+  printSongInfo(songName: string, singerName: string): string;
+}
+
+// const song1: Song = {
+//     songName: 'Natural',
+//     singerName: 'Imagin Drigon',
+//     printSongInfo: (songName, singerName) => {
+//         return `Song: ${songName}, Singer: ${singerName}`
+//     }
+// }
+
+// console.log(song1.printSongInfo('Natural', 'Imagin Drigon'))
+
+// extending inerfaces
+
+interface MovieDetails {
+  readonly name: string;
+  ratings: number;
+  printMovieInfo(name: string, price: number, ratings: number): string | number;
+}
+
+interface MovieGenre extends MovieDetails {
+  genre: string;
+}
+
+const movie1: MovieGenre = {
+  name: "Star Wars",
+  genre: "Action",
+  ratings: 9.8,
+  printMovieInfo(
+    name: string,
+    price: number,
+    ratings: number
+  ): string | number {
+    return `Move name: ${name} price: ${price} Ratings: ${ratings}`;
+  },
+};
+
+const res = movie1.printMovieInfo('John wick', 100, 9.7)
+console.log(res)
+
+interface Vehicle {
+    start(): void;
+    stop(): void
+}
+
+class Car implements Vehicle {
+    start(): void {
+        console.log('Car is starting')
+    }
+    stop():void {
+        console.log('car stops')
     }
 }
 
-const myInstance = new MyClass();
-myInstance.myProperty = 90
+const myCar = new Car();
+myCar.start()
+myCar.stop()
 
-console.log(`Current value: ${myInstance.myProperty}`)
-
+// Declaration merging
 
