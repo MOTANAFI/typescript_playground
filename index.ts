@@ -244,12 +244,27 @@
 // const games: [string, number, boolean] = ['Game 1', 2, true]
 /// Enums
 
-enum WeatherCondition {
-    Sunny = 'sunny',
-    Cloudy = 'cloudy',
-    Rainy = 'rainy',
-    Snowy = 'snowy'
-}
-const currentWeather = WeatherCondition.Snowy
+// enum WeatherCondition {
+//     Sunny = 'sunny',
+//     Cloudy = 'cloudy',
+//     Rainy = 'rainy',
+//     Snowy = 'snowy'
+// }
+// const currentWeather = WeatherCondition.Snowy
 
-console.log(WeatherCondition.Rainy)
+// console.log(WeatherCondition.Rainy)
+
+// Classes in typescript
+
+class Person {
+    name: string;
+    age: number
+    constructor(name: string, age: number) {
+        this.name = name;
+        this.age = age
+
+    }
+}
+
+const person  = new Person("jakaka", 40)
+console.log(person.name)
