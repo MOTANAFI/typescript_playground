@@ -647,27 +647,53 @@ interface Song {
 //   )
 
 
-class Dog {
-  bark(): void {
-    console.log('woff worff')
-  }
+// class Dog {
+//   bark(): void {
+//     console.log('woff worff')
+//   }
+// }
+
+// class Cat {
+//   meow(): void {
+//     console.log('meow')
+//   }
+// }
+
+// function animalSound(animal: Dog | Cat): void {
+//   if(animal instanceof Dog) {
+//     animal.bark()
+//   } else {
+//     animal.meow()
+//   }
+// }
+
+// const myDog = new Dog()
+// const myCat = new Cat()
+// animalSound(myDog)
+// animalSound(myCat)
+
+type Employee = {
+  id: number;
+  name: string
 }
 
-class Cat {
-  meow(): void {
-    console.log('meow')
-  }
+type Manager = {
+  department: string;
+  role: string
 }
 
-function animalSound(animal: Dog | Cat): void {
-  if(animal instanceof Dog) {
-    animal.bark()
-  } else {
-    animal.meow()
-  }
+
+
+type ManageWithEmployeeInfo = Employee & Manager;
+
+const manager: ManageWithEmployeeInfo = {
+  id: 123,
+  name: 'Lexi mohi',
+  department: 'Engineer',
+  role: "Team Lead"
 }
 
-const myDog = new Dog()
-const myCat = new Cat()
-animalSound(myDog)
-animalSound(myCat)
+console.log(manager.id)
+console.log(manager.name)
+console.log(manager.department)
+console.log(manager.role)
