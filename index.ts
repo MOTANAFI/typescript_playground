@@ -631,17 +631,43 @@ interface Song {
 //2 The instanceof operator
 //3 discriminated unions
 
-type MyType = string | number;
+// type MyType = string | number;
 
-function exampleFunction(value: MyType): void {
-  if(typeof value === 'string') {
-    console.log(value.toUpperCase())
+// function exampleFunction(value: MyType): void {
+//   if(typeof value === 'string') {
+//     console.log(value.toUpperCase())
 
-  } else {
-    console.log(value.toFixed(2))
+//   } else {
+//     console.log(value.toFixed(2))
+//   }
+// }
+
+// exampleFunction('hello')
+// exampleFunction(3
+//   )
+
+
+class Dog {
+  bark(): void {
+    console.log('woff worff')
   }
 }
 
-exampleFunction('hello')
-exampleFunction(3
-  )
+class Cat {
+  meow(): void {
+    console.log('meow')
+  }
+}
+
+function animalSound(animal: Dog | Cat): void {
+  if(animal instanceof Dog) {
+    animal.bark()
+  } else {
+    animal.meow()
+  }
+}
+
+const myDog = new Dog()
+const myCat = new Cat()
+animalSound(myDog)
+animalSound(myCat)
