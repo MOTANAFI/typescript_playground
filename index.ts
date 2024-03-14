@@ -496,7 +496,6 @@ interface Song {
 //     return [item, defaultValue]
 // }
 
-
 // const num = printNumber(12, 20)
 // const str = printString('hello', 'universe');
 // const boolean = printBoolean(false, true)
@@ -504,11 +503,60 @@ interface Song {
 // console.log(str)
 // console.log(boolean)
 
+// function printNumber(item: any, defaultValue: any): [any, any] {
+//     return [item, defaultValue]
+// }
+
+// const num = printNumber(2, 'lakakkj');
+// console.log(num)
+
+// function uniqueDataTypesFunc<T>(item: T, defaultValue: T): [T, T] {
+//   return [item, defaultValue];
+// }
+
+// const res = uniqueDataTypesFunc<number>(10, 20);
+// const res1 = uniqueDataTypesFunc<string>("star", "moon");
+// const res2 = uniqueDataTypesFunc<boolean>(true, false);
+// console.log(res);
+// console.log(res1);
+// console.log(res2);
+
+// function uniqueDataTypesFunc<T>(item: T, defaultValue: T): [T, T] {
+//   return [item, defaultValue];
+// }
+
+// interface Dog {
+//   name: string;
+//   breed: string
+// }
+
+// const dog1 = uniqueDataTypesFunc<Dog>(
+//   {
+//     name: 'Buddy', breed: 'Labrador'
+//   },
+//   {name: 'default', breed: 'unknow'}
+//   )
+
+//   console.log(dog1)
+
+// function getRandonmKeyValuePair<T>(obj: { [key: string]: T }): {
+//   key: string;
+//   value: T;
+// } {
+//   const keys = Object.keys(obj);
+//   const randKey = keys[Math.floor(Math.random() * keys.length)];
+//   return { key: randKey, value: obj[randKey] };
+// }
+
+// const stringObjec = {a: 'apple', b: 'banana', c: 'cherry'}
+
+// const res = getRandonmKeyValuePair<string>(stringObjec)
+
+// console.log(res)
+
+// const numberObjec = {one: 1, two: 2, three: 3}
+
+// const res1 = getRandonmKeyValuePair<number>(numberObjec)
+// console.log(res1)
 
 
-function printNumber(item: any, defaultValue: any): [any, any] {
-    return [item, defaultValue]
-}
-
-const num = printNumber(2, 'lakakkj');
-console.log(num)
