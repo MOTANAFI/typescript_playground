@@ -592,9 +592,34 @@ interface Song {
 // const redFruits = filterArray<Fruit>(fruitArray, fruit => fruit.color === 'Red')
 // console.log(redFruits)
 
-function reversePair<T, U>(value1: T, value2: U): [U,T] {
-  return [value2, value1]
+// function reversePair<T, U>(value1: T, value2: U): [U,T] {
+//   return [value2, value1]
+// }
+
+// const reversedPair = reversePair('hello', 20)
+// console.log(reversedPair)
+
+// Generic classes 
+class Box<T> {
+  private content: T;
+
+  constructor(initialContent:T){
+    this.content = initialContent
+  }
+
+  getContent(): T {
+    return this.content
+  }
+  setContent(newContent: T): void {
+    this.content = newContent
+  }
 }
 
-const reversedPair = reversePair('hello', 20)
-console.log(reversedPair)
+const stringBox = new Box<string>('hello')
+stringBox.setContent('new Content added')
+
+console.log(stringBox.getContent())
+
+const numberBox = new Box<number>(20)
+
+console.log(numberBox.getContent())
