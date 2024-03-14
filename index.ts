@@ -672,28 +672,28 @@ interface Song {
 // animalSound(myDog)
 // animalSound(myCat)
 
-// type Employee = {
-//   id: number;
-//   name: string
-// }
+type Employee = {
+  id: number;
+  name: string
+}
 
-// type Manager = {
-//   department: string;
-//   role: string
-// }
+type Manager = {
+  department: string;
+  role: string
+}
 
 
 
-// type ManageWithEmployeeInfo = Employee & Manager;
+type ManageWithEmployeeInfo = Employee & Manager;
 
-// const manager: ManageWithEmployeeInfo = {
-//   id: 123,
-//   name: 'Lexi mohi',
-//   department: 'Engineer',
-//   role: "Team Lead"
-// }
+const manager: ManageWithEmployeeInfo = {
+  id: 123,
+  name: 'Lexi mohi',
+  department: 'Engineer',
+  role: "Team Lead"
+}
 
-// console.log(manager.id)
-// console.log(manager.name)
-// console.log(manager.department)
-// console.log(manager.role)
+console.log(manager.id)
+console.log(manager.name)
+console.log(manager.department)
+console.log(manager.role)
