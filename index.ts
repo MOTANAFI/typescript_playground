@@ -600,26 +600,48 @@ interface Song {
 // console.log(reversedPair)
 
 // Generic classes 
-class Box<T> {
-  private content: T;
+// class Box<T> {
+//   private content: T;
 
-  constructor(initialContent:T){
-    this.content = initialContent
-  }
+//   constructor(initialContent:T){
+//     this.content = initialContent
+//   }
 
-  getContent(): T {
-    return this.content
-  }
-  setContent(newContent: T): void {
-    this.content = newContent
+//   getContent(): T {
+//     return this.content
+//   }
+//   setContent(newContent: T): void {
+//     this.content = newContent
+//   }
+// }
+
+// const stringBox = new Box<string>('hello')
+// stringBox.setContent('new Content added')
+
+// console.log(stringBox.getContent())
+
+// const numberBox = new Box<number>(20)
+
+// console.log(numberBox.getContent())
+
+
+///// type narrowing
+
+//1 Type guards
+//2 The instanceof operator
+//3 discriminated unions
+
+type MyType = string | number;
+
+function exampleFunction(value: MyType): void {
+  if(typeof value === 'string') {
+    console.log(value.toUpperCase())
+
+  } else {
+    console.log(value.toFixed(2))
   }
 }
 
-const stringBox = new Box<string>('hello')
-stringBox.setContent('new Content added')
-
-console.log(stringBox.getContent())
-
-const numberBox = new Box<number>(20)
-
-console.log(numberBox.getContent())
+exampleFunction('hello')
+exampleFunction(3
+  )
